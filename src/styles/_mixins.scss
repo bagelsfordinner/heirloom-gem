@@ -1,0 +1,37 @@
+// src/styles/_mixins.scss
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumn($gap: var(--spacing-small)) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flexRow($gap: var(--spacing-small)) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin softBox($bg: var(--color-surface), $padding: var(--spacing-medium), $radius: var(--border-radius-medium)) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: var(--shadow-small);
+}
+
+@mixin bentoGridItem($bg: var(--color-secondary-surface), $padding: var(--spacing-large), $radius: var(--border-radius-large)) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+}

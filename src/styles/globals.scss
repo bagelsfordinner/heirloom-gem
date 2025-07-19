@@ -1,0 +1,29 @@
+// src/styles/globals.scss
+
+// Import variables, mixins, typography, and base styles
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './_typography.scss';
+@import './_base.scss';
+
+// Global styles specific to your app can go here
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root,
+#__next {
+  height: 100%;
+  width: 100%;
+}
+
+// Add a class for main content wrapper to apply background and text color
+.app-container {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+}

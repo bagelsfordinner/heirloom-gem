@@ -1,0 +1,27 @@
+// src/components/ui/Spinner/Spinner.module.scss
+
+@import './../../../styles/variables'; // Access global variables
+@import './../../../styles/mixins';    // Access global mixins
+
+.spinnerContainer {
+  @include flexCenter;
+  width: 100%;
+  height: 100%;
+  min-height: 150px; // Ensure it has some height even if content is small
+  background-color: transparent; // Or a semi-transparent overlay
+  z-index: var(--z-index-loader);
+  color: var(--color-accent); // Spinner color
+}
+
+.spinner {
+  animation: rotate 1.5s linear infinite; // Animation for the spinner
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

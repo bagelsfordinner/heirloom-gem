@@ -1,0 +1,81 @@
+// src/styles/_base.scss
+
+// Simple CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; // Base font size
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+// Global styles for soft rounded boxes and bento box grid items
+.soft-box {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-medium);
+  box-shadow: var(--shadow-small); // Optional subtle shadow
+}
+
+.bento-grid-item {
+  background-color: var(--color-secondary-surface);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-small); // For internal spacing
+  overflow: hidden; // Ensures content respects rounded corners
+  box-shadow: var(--shadow-medium); // Slightly more prominent shadow
+}
+
+// Add scrollbar styling for a cleaner look
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary-surface);
+  border-radius: 4px;
+  border: 2px solid var(--color-background);
+}

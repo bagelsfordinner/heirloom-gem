@@ -1,0 +1,51 @@
+// src/styles/_variables.scss
+
+// --- Colors ---
+// Define default (dark mode) colors
+:root { // <--- All variables should be inside this block
+  --color-background: #1a1e1c;
+  --color-surface: #242a27;
+  --color-secondary-surface: #2d3b36;
+  --color-text-primary: #c7cecb;
+  --color-accent: #ac3c0c;
+  --color-text-secondary: rgba(#c7cecb, 0.7); // Slightly faded text
+
+  // Shadows
+  --shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.4);
+
+  // --- Border Radii ---
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px; // For general softboxes
+  --border-radius-large: 12px; // For bento box items
+
+  // --- Spacing (using a modular scale) ---
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  // --- Z-index for layering ---
+  --z-index-base: 1;
+  --z-index-tooltip: 100;
+  --z-index-modal: 200;
+  --z-index-loader: 999;
+}
+
+// Example for a potential light theme (not active yet, but groundwork laid)
+// [data-theme='light'] {
+//   --color-background: #f0f2f5;
+//   --color-surface: #ffffff;
+//   --color-secondary-surface: #e6e8eb;
+//   --color-text-primary: #333333;
+//   --color-accent: #AC3C0C; // Accent might remain consistent
+//   --color-text-secondary: rgba(#333333, 0.7);
+//
+//   --shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.1);
+//   --shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.15);
+//   --shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.2);
+// }
