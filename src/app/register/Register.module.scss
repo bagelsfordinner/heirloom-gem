@@ -1,0 +1,109 @@
+// src/app/register/Register.module.scss
+@import './../../styles/variables';
+@import './../../styles/mixins';
+
+.container {
+  @include flexCenter;
+  min-height: calc(100vh - var(--spacing-xxl)); // Adjust for potential header/footer
+  padding: var(--spacing-large);
+}
+
+.registerBox {
+  @include flexColumn($gap: var(--spacing-medium));
+  width: 100%;
+  max-width: 400px; // Max width for the form box
+  text-align: center;
+  box-shadow: var(--shadow-large); // More prominent shadow for auth forms
+
+  .title {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-small);
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .form {
+    @include flexColumn($gap: var(--spacing-small));
+    width: 100%;
+  }
+
+  .inputGroup {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-background); // Input background
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-xs);
+    border: 1px solid var(--color-secondary-surface); // Subtle border
+
+    .icon {
+      color: var(--color-text-secondary);
+      margin-right: var(--spacing-xs);
+    }
+
+    .input {
+      flex-grow: 1;
+      background: none;
+      border: none;
+      color: var(--color-text-primary);
+      padding: var(--spacing-xxs) 0; // Padding inside input
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: var(--color-text-secondary);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .error {
+    color: var(--color-accent); // Use accent for errors
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: var(--spacing-small);
+  }
+
+  .button {
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-accent, 10%); // Sass function
+    }
+
+    &:disabled {
+      background-color: var(--color-secondary-surface);
+      color: var(--color-text-secondary);
+      cursor: not-allowed;
+    }
+  }
+
+  .loginLink, .registerLink {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-medium);
+
+    span {
+      color: var(--color-accent);
+      cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# Dependencies
+# Ignore all node_modules directories
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,32 +11,39 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# Testing
+# Ignore test coverage folders anywhere in the project
+coverage/
 
-# next.js
+# Next.js
+# These are typically in the root directory
 /.next/
 /out/
 
-# production
-/build
+# Production
+# Ignore build output folders anywhere in the project
+build/
 
-# misc
+# Misc
 .DS_Store
 *.pem
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Local Environment Variables
+# Keep secrets out of version control
 .env*
 
-# vercel
-.vercel
+# Vercel
+.vercel/
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDEs
+.vscode/
